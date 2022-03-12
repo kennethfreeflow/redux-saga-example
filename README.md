@@ -16,14 +16,51 @@ At the highest level is a workspace. A workspace contains many users and many ch
 
 Each indented bulletpoint indicated a subcollection. 
 
+```
 - workspaces
   - channels
     - messages
   - users
-
-## Global State Management
-
 ```
+
+## App State Management
+
+We're going to use Redux for app state management.
+
+```ts
+// appState
+
 {
+  auth: {
+    isSignedIn: true,
+  },
+  currentChannel: {
+    id: "HEHEHEHE",
+    isLoading: false,
+  },
+  currentWorkspace: {
+    id: "Jejbfnjroskjsnsk",
+    isLoading: false,
+  },
+  workspacesByID: {
+    "Jejbfnjroskjsnsk": {
+      title: "Something",
+      photo: "https://..."
+    }
+  },
+  channelsByID: {},
+  usersByID: {}
 }
 ```
+
+auth
+
+channelsByID
+
+workspacesByID
+
+usersByID
+
+currentChannel
+
+currentWorkspace
